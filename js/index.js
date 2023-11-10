@@ -43,14 +43,18 @@ function loadProduct() {
         cardPrice.className = "card-text";
         cardPrice.textContent = `${product.price}€`;
 
+        const buttonDiv = document.createElement("div");
+        buttonDiv.className =
+          "d-flex justify-content-evenly align-items-center";
+
         const cardButtonView = document.createElement("a");
         cardButtonView.href = `./details.html?prodID=${product._id}`;
-        cardButtonView.className = "btn btn-primary ms-2";
+        cardButtonView.className = "btn btn-primary";
         cardButtonView.textContent = "Scopri di più";
 
         const cardButtonModify = document.createElement("a");
         cardButtonModify.href = `./backoffice.html?prodID=${product._id}`;
-        cardButtonModify.className = "btn btn-success ms-5";
+        cardButtonModify.className = "btn btn-success";
         cardButtonModify.textContent = "Modifica";
 
         cardText.appendChild(cardTitle);
@@ -59,8 +63,9 @@ function loadProduct() {
 
         cardBody.appendChild(cardImg);
         cardBody.appendChild(cardText);
-        cardText.appendChild(cardButtonView);
-        cardText.appendChild(cardButtonModify);
+        cardText.appendChild(buttonDiv);
+        buttonDiv.appendChild(cardButtonView);
+        buttonDiv.appendChild(cardButtonModify);
         card.appendChild(cardBody);
 
         return card;
