@@ -38,7 +38,7 @@ document
 
 if (prodID) {
   document.getElementById("headerTitle").innerText = "Modify Product";
-  document.getElementById("firstButton").innerText = "Apply Modify";
+  document.getElementById("firstButton").innerText = "Apply Changes";
   document.getElementById("erase").classList.remove("visually-hidden");
 
   fetch(URL, {

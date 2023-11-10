@@ -16,12 +16,25 @@ window.onload = () => {
     .then(productObj => {
       container.innerHTML = `
                     <h2>${productObj.name}</h2>
-                    <img class="card-img-top object-fit-cover my-4" src="${productObj.imageUrl}" style="width: 400px;">
+                    <img class="card-img-top object-fit-cover my-4 w-50" src="${
+                      productObj.imageUrl
+                    }" style="width: 400px;">
                     <h5>${productObj.description}</h5>
                     <h5>${productObj.price}€</h5>
                     <h6>Informazioni dal Server:</h6>
                     <ul class="list-group list-group-flush">
-                        <li class="list-group-item"><strong>_id:</strong> ${productObj._id}</li>
+                        <li class="list-group-item"><strong>ID Prodotto:</strong> ${
+                          productObj._id
+                        }</li>
+                        <li class="list-group-item"><strong>ID User:</strong> ${
+                          productObj.userId
+                        }</li>
+                        <li class="list-group-item"><strong>Creato in data:</strong> ${new Date(
+                          productObj.createdAt
+                        ).toLocaleString()}</li>
+                        <li class="list-group-item"><strong>Aggiornato in data:</strong> ${new Date(
+                          productObj.updatedAt
+                        ).toLocaleString()}</li>
                     </ul>
                     <button class="btn btn-info mt-4" onclick="handleClick()">Modifica Prodotto</button>
                 `;

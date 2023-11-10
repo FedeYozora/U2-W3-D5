@@ -18,7 +18,9 @@
   <body>
     <nav class="navbar navbar-expand-lg" style="background-color: burlywood">
       <div class="container-md">
-        <a class="navbar-brand" href="#">CRUDAZON Backoffice Area</a>
+        <a class="navbar-brand" href="#"
+          ><i class="bi bi-incognito"></i> CRUDAZON Backoffice Area</a
+        >
         <button
           class="navbar-toggler"
           type="button"
@@ -105,19 +107,25 @@
             required
           />
         </div>
-        <button type="submit" id="firstButton" class="btn btn-primary">
-          Submit
-        </button>
-        <button
-          type="reset"
-          onclick="return confirm_reset();"
-          class="btn btn-warning"
-        >
-          Reset
-        </button>
-        <button type="submit" id="erase" class="btn btn-danger visually-hidden">
-          Delete Product
-        </button>
+        <div class="d-flex justify-content-center">
+          <button type="submit" id="firstButton" class="btn btn-success mx-3">
+            Submit
+          </button>
+          <button
+            type="reset"
+            onclick="return confirm_reset();"
+            class="btn btn-warning mx-3"
+          >
+            Reset
+          </button>
+          <button
+            type="submit"
+            id="erase"
+            class="btn btn-danger mx-3 visually-hidden"
+          >
+            Delete Product
+          </button>
+        </div>
       </form>
     </div>
   </body>

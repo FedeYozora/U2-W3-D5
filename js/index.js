@@ -16,7 +16,7 @@ function loadProduct() {
     .then(data => {
       function createCard(product) {
         const card = document.createElement("div");
-        card.className = "col-md-3";
+        card.className = "col-sm-6 col-md-4 col-lg-3";
 
         const cardBody = document.createElement("div");
         cardBody.className = "card mb-4 shadow-sm";
@@ -41,7 +41,7 @@ function loadProduct() {
 
         const cardPrice = document.createElement("p");
         cardPrice.className = "card-text";
-        cardPrice.textContent = `$${product.price}`;
+        cardPrice.textContent = `${product.price}€`;
 
         const cardButtonView = document.createElement("a");
         cardButtonView.href = `./details.html?prodID=${product._id}`;
