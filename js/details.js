@@ -14,8 +14,7 @@ window.onload = () => {
   })
     .then(resp => resp.json())
     .then(productObj => {
-      container.innerHTML = `
-                    <h2>${productObj.name}</h2>
+      container.innerHTML = `<h2>${productObj.name}</h2>
                     <img class="card-img-top object-fit-cover my-4 w-50" src="${
                       productObj.imageUrl
                     }" style="width: 400px;">
@@ -36,8 +35,7 @@ window.onload = () => {
                           productObj.updatedAt
                         ).toLocaleString()}</li>
                     </ul>
-                    <button class="btn btn-info mt-4" onclick="handleClick()">Modifica Prodotto</button>
-                `;
+                    <button class="btn btn-info mt-4" onclick="handleClick()">Modifica Prodotto</button>`;
     });
 };
 

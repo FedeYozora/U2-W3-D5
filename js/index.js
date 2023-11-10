@@ -45,13 +45,13 @@ function loadProduct() {
 
         const cardButtonView = document.createElement("a");
         cardButtonView.href = `./details.html?prodID=${product._id}`;
-        cardButtonView.className = "btn btn-primary";
+        cardButtonView.className = "btn btn-primary ms-2";
         cardButtonView.textContent = "Scopri di più";
 
         const cardButtonModify = document.createElement("a");
         cardButtonModify.href = `./backoffice.html?prodID=${product._id}`;
-        cardButtonModify.className = "btn btn-success";
-        cardButtonModify.textContent = "Modifica Prodotto";
+        cardButtonModify.className = "btn btn-success ms-5";
+        cardButtonModify.textContent = "Modifica";
 
         cardText.appendChild(cardTitle);
         cardText.appendChild(cardDescription);
